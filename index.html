@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>reCAPTCHA + Ada demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lee6kMiAAAAAIkhxLkjF8kuXauPCT3rh4-MQdr2"></script>
+    <script
+  id="__ada"
+  data-handle="alexh"
+  src="https://static.ada.support/embed2.js"
+></script>
+<script>
+  window.adaSettings = {
+    align: "left"
+  }
+</script>
+    <script>
+    grecaptcha.ready(function() {
+          grecaptcha.execute('6Lee6kMiAAAAAIkhxLkjF8kuXauPCT3rh4-MQdr2', {action: 'submit'}).then(function(token) {
+          adaEmbed.setMetaFields({"recaptcha_token": token});
+          adaEmbed.toggle();
+              // Add your logic to submit to your backend server here.
+          });
+          window.setTimeout(() => {
+              window.adaEmbed.triggerAnswer("633737888f4a600b8dc4c608");
+          }, 5000)
+        });</script>
+  </head>
+  <body>
+    
+  </body>
+</html>
